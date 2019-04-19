@@ -18,7 +18,7 @@
     $twitter = get_post($conn, 'twitter');
     $instagram = get_post($conn, 'instagram');
     $section = get_post($conn, 'section');
-    $id = get_post($conn, 'id');
+    $id = null;
     $query = "INSERT INTO btftest VALUES" . " ('$twitter', '$instagram', '$section', '$id')";
     $result = $conn->query($query);
     if(!$result) echo "INSERT failed<br><br>";
@@ -29,7 +29,6 @@
   Twitter <input type="text" name="twitter">
   Instagram <input type="text" name="instagram">
   Section <input type="text" name="section">
-  ID <input type="text" name="id">
   <input type="submit" value="ADD RECORD">
   </pre></form>
 _END;
